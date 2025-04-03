@@ -21,7 +21,6 @@ public Medico() {}
 
     public String getNome() {
         return nome;
-        System.out.printf("");
     }
 
     public void setNome(String nome) {
