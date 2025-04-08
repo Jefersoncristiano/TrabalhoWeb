@@ -1,24 +1,14 @@
-package Domain;
+package dto;
 
-public class Medico {
+public class MedicoInsertRequestDTO {
 
-private Integer id;
-private String nome;
-private String telefone;
-private String email;
-private Integer CRM;
-private String especialidade;
-private boolean ativo = true;
+    private String nome;
+    private String telefone;
+    private String email;
+    private Integer crm;
+    private String especialidade;
 
-public Medico() {}
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public MedicoInsertRequestDTO() {}
 
     public String getNome() {
         return nome;
@@ -44,12 +34,12 @@ public Medico() {}
         this.email = email;
     }
 
-    public Integer getCRM() {
-        return CRM;
+    public Integer getCrm() {
+        return crm;
     }
 
-    public void setCRM(Integer CRM) {
-        this.CRM = CRM;
+    public void setCrm(Integer crm) {
+        this.crm = crm;
     }
 
     public String getEspecialidade() {
@@ -60,11 +50,4 @@ public Medico() {}
         this.especialidade = especialidade;
     }
 
-    public boolean isAtivo() {
-        return ativo;
-    }
-
-    public void setAtivo(boolean ativo) {
-        this.ativo = ativo;
-    }
 }
