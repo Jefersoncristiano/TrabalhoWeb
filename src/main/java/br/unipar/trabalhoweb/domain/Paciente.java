@@ -1,14 +1,21 @@
-package dto;
+package br.unipar.trabalhoweb.domain;
 
-public class MedicoInsertRequestDTO {
+public class Paciente {
 
+    private Integer id;
     private String nome;
     private String telefone;
     private String email;
-    private Integer crm;
-    private String especialidade;
+    private Integer CPF;
 
-    public MedicoInsertRequestDTO() {}
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;
@@ -34,20 +41,11 @@ public class MedicoInsertRequestDTO {
         this.email = email;
     }
 
-    public Integer getCrm() {
-        return crm;
+    public Integer getCPF() {
+        return CPF;
     }
 
-    public void setCrm(Integer crm) {
-        this.crm = crm;
+    public void setCPF(Integer CPF) {
+        this.CPF = CPF;
     }
-
-    public String getEspecialidade() {
-        return especialidade;
-    }
-
-    public void setEspecialidade(String especialidade) {
-        this.especialidade = especialidade;
-    }
-
 }

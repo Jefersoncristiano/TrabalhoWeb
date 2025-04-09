@@ -1,4 +1,4 @@
-package Domain;
+package br.unipar.trabalhoweb.domain;
 
 import java.time.LocalDate;
 

@@ -1,4 +1,4 @@
-package Domain;
+package br.unipar.trabalhoweb.domain;
 
 public class Medico {
 
@@ -9,6 +9,10 @@ private String email;
 private Integer CRM;
 private String especialidade;
 private boolean ativo = true;
+private String logradouro;
+private String numero;
+private String complemento;
+private String bairro;
 
 public Medico() {}
 
@@ -66,5 +70,37 @@ public Medico() {}
 
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 }

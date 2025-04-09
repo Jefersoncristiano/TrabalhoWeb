@@ -1,4 +1,4 @@
-package Infraestructure;
+package br.unipar.trabalhoweb.infrastructure;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
