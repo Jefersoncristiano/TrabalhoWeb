@@ -187,6 +187,38 @@ public class MedicoRepository {
         }
     }
 
+    public Medico buscarPorId(Integer id) throws SQLException, NamingException {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            conn = new ConnectionFactory().getConnection();
+            stmt = conn.prepareStatement("SELECT * FROM medico WHERE id = ?");
+            stmt.setInt(1, id);
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                Medico medico = new Medico();
+                medico.setId(rs.getInt("id"));
+                medico.setNome(rs.getString("nome"));
+                medico.setTelefone(rs.getString("telefone"));
+                medico.setEmail(rs.getString("email"));
+                medico.setCRM(rs.getInt("crm"));
+                medico.setEspecialidade(rs.getString("especialidade"));
+                medico.setAtivo(rs.getBoolean("ativo"));
+                return medico;
+            }
+
+            return null;
+
+        } finally {
+            if (rs != null) rs.close();
+            if (stmt != null) stmt.close();
+            if (conn != null) conn.close();
+        }
+    }
+
     private Medico montarMedico(ResultSet rs) throws SQLException {
         Medico m = new Medico();
         m.setId(rs.getInt("id"));

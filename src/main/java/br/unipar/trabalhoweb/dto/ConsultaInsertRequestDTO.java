@@ -1,26 +1,15 @@
-package br.unipar.trabalhoweb.domain;
+package br.unipar.trabalhoweb.dto;
+
 import java.time.LocalDateTime;
 
-public class Consulta {
+public class ConsultaInsertRequestDTO {
 
-    private Integer id;
     private LocalDateTime dataConsulta;
     private Integer idMedico;
     private Integer idPaciente;
     private String observacoes;
-    private boolean ativa = true;
-    private boolean cancelada;
-    private String motivoCancelamento;
 
-    public Consulta() {}
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public ConsultaInsertRequestDTO() {}
 
     public LocalDateTime getDataConsulta() {
         return dataConsulta;
@@ -52,29 +41,5 @@ public class Consulta {
 
     public void setObservacoes(String observacoes) {
         this.observacoes = observacoes;
-    }
-
-    public boolean isAtiva() {
-        return ativa;
-    }
-
-    public void setAtiva(boolean ativa) {
-        this.ativa = ativa;
-    }
-
-    public boolean isCancelada() {
-        return cancelada;
-    }
-
-    public void setCancelada(boolean cancelada) {
-        this.cancelada = cancelada;
-    }
-
-    public String getMotivoCancelamento() {
-        return motivoCancelamento;
-    }
-
-    public void setMotivoCancelamento(String motivoCancelamento) {
-        this.motivoCancelamento = motivoCancelamento;
     }
 }

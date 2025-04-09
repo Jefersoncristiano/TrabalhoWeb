@@ -1,8 +1,7 @@
-package br.unipar.trabalhoweb.domain;
+package br.unipar.trabalhoweb.dto;
 
-public class Paciente {
+public class PacienteInsertRequestDTO {
 
-    private Integer id;
     private String nome;
     private String telefone;
     private String email;
@@ -14,17 +13,8 @@ public class Paciente {
     private String cidade;
     private String uf;
     private String cep;
-    private boolean ativo = true;
 
-    public Paciente() {}
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public PacienteInsertRequestDTO() {}
 
     public String getNome() {
         return nome;
@@ -112,13 +102,5 @@ public class Paciente {
 
     public void setCep(String cep) {
         this.cep = cep;
-    }
-
-    public boolean isAtivo() {
-        return ativo;
-    }
-
-    public void setAtivo(boolean ativo) {
-        this.ativo = ativo;
     }
 }
