@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 
-    private static final String RESOURCE_NAME = "java:/PostgresDS";
+    private static final String RESOURCE_NAME = "PostgresDS";
 
     public Connection getConnection() throws NamingException , SQLException{
        return getDatasource().getConnection();
